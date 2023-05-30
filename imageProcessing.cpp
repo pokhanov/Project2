@@ -39,6 +39,6 @@ Mat imageProcessing::preProcessing(Mat &image) {
 	//计算变换矩阵
 	rotation = getPerspectiveTransform(src_points, dst_points);
 	//应用变换矩阵来实现ROI区域的透视变换
-	warpPerspective(image, warped, rotation, image.size());
+	warpPerspective(gray, warped, rotation, image.size());
 	return warped;		//得到的warped图像可以用于文字识别
 }

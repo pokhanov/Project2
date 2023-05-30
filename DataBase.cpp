@@ -1,7 +1,11 @@
 #include "main.h"
+#include "qresource.h"
 #include "DataBase.h"
 #include <qsqlquery.h>
 #include <qvector.h>
+#include <qvariant.h>
+#include <QDate>
+#include <QVariant> 
 
 DataBase::DataBase(QObject *parent)
 	: QObject(parent)
@@ -67,4 +71,21 @@ int DataBase::creatAccount(QList<QString> str) {
 		return 1;		//返回1表示账户创建成功
 	}
 	return 0;		//返回0表示数据库执行出错
+}
+
+QList<int> DataBase::getDateScores(QString account) {
+	QSqlQuery query;
+	QString sql = QString(" SELECT score FROM scores WHERE id = '%1'").arg(account);
+	query.exec(sql);
+	QList<int> scores;
+	//if (query.first()) {		//如果有成绩,把所有日期和成绩加入QMap中
+	//	int score = query.value(0).toInt();
+	//	scores.append(score);
+		while (query.next()) {
+			int score = query.value(0).toInt();
+			qDebug() << "score: " << score << "  ";
+			scores.append(score);
+		}
+	//}
+	return scores;
 }
