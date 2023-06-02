@@ -1,0 +1,20 @@
+#pragma once
+#ifndef _MYHEAD_H
+#define _MYHEAD_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <string.h>
+#include <stdbool.h>
+#include <time.h>
+#include <math.h>
+#include <opencv2/opencv.hpp>
+#include <qmessagebox.h>
+#include <fstream>
+#include <curl/curl.h>
+#include <json/json.h>
+#endif

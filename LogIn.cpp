@@ -2,6 +2,7 @@
 #include "LogIn.h"
 #include "DataBase.h"
 #include "Regist.h"
+#include "QtWidgetsApplication1.h"
 #include <qmessagebox.h>
 
 
@@ -43,7 +44,11 @@ void LogIn::on_ToLogIn_clicked() {
 	}
 	if (info == 1) {
 		//登陆成功， 页面转跳
-		QMessageBox::information(this, "test", "登录成功");
+		//向下一个界面传入当前账号
+		this->close();
+		QtWidgetsApplication1 *page = new QtWidgetsApplication1;
+		page->getChart(account);
+		page->show();
 	}
 	
 }

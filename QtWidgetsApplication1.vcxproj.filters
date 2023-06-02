@@ -52,6 +52,12 @@
     <ClCompile Include="imageProcessing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="getApi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="LogIn.h">
@@ -77,6 +83,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="imageProcessing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="getApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataProcess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
